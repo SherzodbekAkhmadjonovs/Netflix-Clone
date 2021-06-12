@@ -1,0 +1,361 @@
+.container .head{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 999;
+}
+.container .head img{
+    width: 13%;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .fit{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+.banner::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #000, transparent);
+}
+.banner .box{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.banner .box .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner .box .heading h1{
+    font-size: 3.125rem;
+    color: white;
+    letter-spacing: 2px;
+    width: 80%;
+}
+.banner .box .heading h4{
+    font-size: 1.625rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+.banner .box .heading p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+.banner .box .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-top: 0.6rem solid #111;
+}
+.part1 .talk{
+    width: 40%;
+}
+.part1 .img{
+    width: 45%;
+}
+.img111{
+    width: 100%;
+}
+.part1 .talk h1{
+    font-size: 3.3rem;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+.part1 .talk p{
+    font-size: 1.7rem;
+}
+.download{
+    color: #0071d5;
+    border: 2px solid rgb(100, 99, 99);
+    padding: .5em .75em;
+    border-radius: .75em;
+    width: 390px;
+    margin-left: 200px;
+}
+.gif{
+    height: 76px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left-down{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.fit2{
+    width: 51px;
+    height: 72px;
+    padding-right: 10px;
+}
+.right-down img{
+    width: 3rem;
+}
+.list{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.list h1{
+    font-size: 3rem;
+    padding: 3rem 0 4rem 0;
+}
+.tittle{
+    background: #303030;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+.icon{
+    width: 20px;
+    position: relative;
+}
+.icon::before, .icon::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    top: -1.5px;
+}
+.icon::after{
+    transform: rotate(90deg);
+    transition: 0.5s linear;
+}
+.text{
+    background: #303030;
+    line-height: 35px;
+    margin: 3px 0;
+    font-size: 1.7rem;
+    /* padding: 20px 30px; */
+    font-weight: 400;
+    height: 0;
+    opacity: 0;
+}
+.item:target .text{
+    opacity: 1;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0;
+    border-top: 2px solid #000;
+    margin-bottom: 6px;
+}
+.item:target .icon{
+    transform: rotate(90deg);
+    transition: 0.5s linear;
+}
+.last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.last p{
+    font-size: 1.9rem;
+    line-height: 100px;
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+    margin: auto;
+    padding: 4rem 0; 
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.footer .one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    margin: auto;
+    width: 25%;
+    
+}
+.items li{
+    margin-top: 10px;
+}
+.items li a{
+    color: #757575;
+}
+@media(max-width:1440px){
+    .download{
+        margin-left: 108px;
+    }
+    .items{
+        margin-left: -109px;
+    }
+    .one{
+        width: 30%;
+    }
+}
+@media(max-width:1024px){
+    .part1 .talk h1{
+        font-size: 2rem;
+    }
+    .part1 .talk P{
+        font-size: 1.5rem;
+    }
+    .download{
+        width: 322px;
+        margin-left: 54px;
+    }
+    .footer{
+        padding-left: 73px;
+        padding-right: 32px;
+    }
+}
+@media(max-width:787px){
+    .container .head{
+        padding: 20px 50px;
+    }
+    .container .head img{
+        width: 20%;
+    }
+    .container .box .heading h2{
+        font-size: 3.1rem;
+        letter-spacing: 1.5px;
+        width: 100%;
+    }
+    .container .box .heading h4{
+        font-size: 1.4rem;
+        padding: 0.8rem 0;
+    }
+    .container .box .heading P{
+        font-size: 1.1rem;
+        padding-bottom: 17px;
+    }
+}
+@media(max-width:768px){
+    .heading h1{
+        font-size: 2rem;
+    }
+    .part1 .talk p{
+        font-size: 1.2rem;
+    }
+    .part1 .talk h1{
+        font-size:1.8rem;
+    }
+    .gif{
+        width: 183px;
+        height: 68px;
+    }
+    .download{
+        width: 214px;
+    }
+    .list h1{
+        font-size: 2rem;
+    }
+    .last p{
+        line-height: 45px;
+        font-size: 1.3rem;
+    }
+}
+@media(max-width:425px){
+    .container .head img{
+        width: 33%;
+    }
+    .banner .box .heading h1{
+        font-size: 1.8rem;
+        margin-top: 70px;
+    }
+    .part1{
+        flex-direction: column;
+    }
+    .part1 .talk{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .part1 .img{
+        width: 131%;
+    }
+    .gif{
+        width: 230px;
+    }
+    .download{
+        width: 270px;
+    }
+    .list h1{
+        font-size: 20px;
+    }
+    .tittle span{
+        font-size: 20px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .last p{
+        font-size: 12px;
+    }
+    .items li a{
+        font-size: 12px;
+    }
+    .items{
+        margin-left: -85px;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer .one{
+        width:45%
+    }
+}
